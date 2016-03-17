@@ -3,6 +3,7 @@ module Quickbooks
     class JournalEntryLineDetail < BaseModel
       include NameEntity::Quality
 
+      xml_accessor :description, :from => 'Description'
       xml_accessor :posting_type, :from => 'PostingType'
       xml_accessor :entity, :from => 'Entity', :as => Entity
       xml_accessor :account_ref, :from => 'AccountRef', :as => BaseReference
